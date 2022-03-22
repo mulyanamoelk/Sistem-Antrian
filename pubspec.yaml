@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -29,7 +29,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cool_alert: ^1.1.0
+  sms_autofill: ^2.2.0
 
+  convex_bottom_bar: ^3.0.0
+  table_calendar: ^3.0.4
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -51,7 +55,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -63,8 +66,31 @@ flutter:
     - asset/images/splash/pic.png
     - asset/images/splash/phonecall.png
     - asset/images/buatJanji/rs.png
-    - asset/images/detail/gambarRsNurhayati.png
-  
+    - asset/images/details/gambarRsNurhayati.png
+    - asset/images/details/jantung.png
+    - asset/images/details/ortho.png
+    - asset/images/details/paru.png
+    - asset/images/details/pic.png
+    - asset/images/details/urology.png
+    - asset/images/buatJanji/bedah.png
+    - asset/images/buatJanji/buatJanji.png
+    - asset/images/buatJanji/Calender.png
+    - asset/images/buatJanji/dalam.png
+    - asset/images/buatJanji/janji.png
+    - asset/images/buatJanji/jiwa.png
+    - asset/images/buatJanji/konsultasi.png
+    - asset/images/buatJanji/Logo.png
+    - asset/images/buatJanji/obat.png
+    - asset/images/buatJanji/umum.png
+    - asset/images/buatJanji/kartini.png
+    - asset/images/profile/Avatar.png
+    - asset/images/profile/Vector.png
+    - asset/images/profile/Chat.png
+    - asset/images/profile/password.png
+    - asset/images/profile/email.png
+    - asset/images/profile/booking.png
+    - asset/images/profile/Phone.png
+    - asset/images/profile/lokasi.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
