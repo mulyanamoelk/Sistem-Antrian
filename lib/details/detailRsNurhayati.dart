@@ -1,198 +1,243 @@
 import 'package:flutter/material.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:sistem_antrian/widgetCard/cardDetailRS/cardObat.dart';
+import 'package:sistem_antrian/widgetCard/cardDetailRS/cardTentang.dart';
+import 'package:sistem_antrian/widgetCard/cardDetailRS/cardTersedia.dart';
 
-class detailRsNurhayati extends StatelessWidget {
-  const detailRsNurhayati({Key? key}) : super(key: key);
+class DetailRsNurhayati extends StatefulWidget {
+  const DetailRsNurhayati({Key? key}) : super(key: key);
 
   @override
+  State<DetailRsNurhayati> createState() => _DetailRsNurhayatiState();
+}
+
+class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
+  @override
   Widget build(BuildContext context) {
+    //hero image
     Widget section1() {
       return Stack(
         children: <Widget>[
           Image(
-            image: AssetImage('asset/images/deatil/gambarRsNurhayati.png'),
+            image: AssetImage('asset/images/details/gambarRsNurhayati.png'),
+            width: 398,
             height: 286,
           ),
-          Icon(Icons.heart_broken)
+          Container(
+            margin: EdgeInsets.fromLTRB(24, 30, 0, 0),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+                color: Color(0xffFFFFFF),
+                borderRadius: BorderRadius.circular(90)),
+            child: Column(
+              children: [
+                BackButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                )
+              ],
+            ),
+          ),
         ],
       );
     }
 
+    //klinik corner
     Widget section2() {
       return Container(
+        margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text(
-              "Klinik Corner \nRS Nurhayati",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-            Column(
-              children: <Widget>[
-                Icon(Icons.map),
-                Icon(
-                  Icons.star,
-                  color: Colors.orange,
-                )
-              ],
-            )
-          ],
-        ),
-      );
-    }
-
-    Widget section3() {
-      return Container(
-        child: Row(
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                Icon(Icons.local_post_office),
-                SizedBox(
-                  height: 10,
-                ),
+            Container(
+              child: Column(children: [
                 Text(
-                  "Bikin Janji",
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
+                  " Klinik Corner \n RSIH",
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
                 ),
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Icon(Icons.local_post_office),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Resep Obat",
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            ),
-            Column(
-              children: <Widget>[
-                Icon(Icons.local_post_office),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Konsultasi",
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            )
-          ],
-        ),
-      );
-    }
-
-    Widget section4() {
-      Widget s4content1(String hari) {
-        return Container(
-          width: 85,
-          height: 62,
-          decoration: BoxDecoration(
-            color: Colors.green,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Text(
-            hari,
-            style: TextStyle(fontSize: 9),
-          ),
-        );
-      }
-
-      return Container(
-        child: Column(
-          children: <Widget>[
-            Text(
-              "Pilih tanggal dan waktu kunjungan",
-              style: TextStyle(
-                fontSize: 14,
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: <Widget>[
-                s4content1("Hari ini\n09 Mar"),
-                SizedBox(height: 20),
-                s4content1("Hari ini\n10 Mar"),
-                SizedBox(height: 20),
-                s4content1("Hari ini\n11 Mar"),
-              ],
+              ]),
             ),
             Container(
-                width: 85,
-                height: 62,
-                decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Icon(Icons.calendar_month)),
-          ],
-        ),
-      );
-    }
-
-    Widget section5() {
-      Widget s5content1(String title, String imageUrl) {
-        return Container(
-          child: Column(
-            children: <Widget>[
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 14,
-                ),
+              child: Column(
+                children: <Widget>[
+                  Icon(Icons.map),
+                  Icon(
+                    Icons.star,
+                    size: 15,
+                    color: Colors.orange,
+                  )
+                ],
               ),
-              Image(image: AssetImage(imageUrl))
-            ],
-          ),
-        );
-      }
-
-      return Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            s5content1("Penyakit Dalam", "asset/images/splash/pic.png"),
-            s5content1("Bedah", "asset/images/splash/pic.png"),
-            s5content1("Umum", "asset/images/splash/pic.png")
+            ),
           ],
         ),
       );
     }
 
+    //section membuat janji
+    Widget section3() {
+      return Container(
+        margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[],
+        ),
+      );
+    }
+
+    //pilih tanggal
+    Widget section4() {
+      return GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, 'janji');
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            card1(
+                ImageUrl: 'asset/images/buatJanji/buatJanji.png',
+                title: 'buat janji',
+                link: 'janji'),
+            card1(
+                ImageUrl: 'asset/images/buatJanji/obat.png',
+                title: 'Obat',
+                link: 'janji'),
+            card1(
+                ImageUrl: 'asset/images/buatJanji/konsultasi.png',
+                title: 'Konsultasi',
+                link: 'janji')
+          ],
+        ),
+      );
+    }
+
+    //layanan tersedia
+    Widget section5() {
+      return GestureDetector(
+        onDoubleTap: () {},
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Klinik yang tersedia',
+              style: TextStyle(
+                  color: Color(0xff82868E), fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  cardTersedia(
+                      ImageUrl: 'asset/images/details/ortho.png',
+                      title: 'Ortho',
+                      link: 'ortho'),
+                  cardTersedia(
+                      ImageUrl: 'asset/images/details/paru.png',
+                      title: 'paru',
+                      link: 'paru'),
+                  cardTersedia(
+                      ImageUrl: 'asset/images/details/urology.png',
+                      title: 'Urology',
+                      link: 'paru'),
+                  cardTersedia(
+                      ImageUrl: 'asset/images/details/jantung.png',
+                      title: 'Jantung',
+                      link: 'paru')
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    //tentang klinik
     Widget section6() {
       return Container(
-          width: 331,
-          height: 60,
-          decoration: BoxDecoration(
-              color: Colors.green, borderRadius: BorderRadius.circular(20)),
-          child: Text(
-            "Buat Janji",
-            style: TextStyle(
-                fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
-          ));
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Tentang Klinik',
+              style: TextStyle(
+                  color: Color(0xff82868E),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  cardTentang(
+                      ImageUrl: 'asset/images/details/pic.png', link: 'pic'),
+                  SizedBox(width: 10),
+                  cardTentang(
+                      ImageUrl: 'asset/images/details/pic.png', link: 'pic'),
+                  SizedBox(width: 10),
+                  cardTentang(
+                      ImageUrl: 'asset/images/details/pic.png', link: 'pic'),
+                  SizedBox(width: 10),
+                  cardTentang(
+                      ImageUrl: 'asset/images/details/pic.png', link: 'pic')
+                ],
+              ),
+            )
+          ],
+        ),
+      );
     }
 
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
-          section1(),
-          section2(),
-          section3(),
-          section4(),
-          section5(),
-          section6()
-        ],
-      ),
-    );
+        body: Container(
+          margin: EdgeInsets.fromLTRB(24, 10, 24, 24),
+          child: Center(
+            child: ListView(
+              children: <Widget>[
+                section1(),
+                SizedBox(
+                  height: 24,
+                ),
+                section2(),
+                SizedBox(
+                  height: 24,
+                ),
+                section3(),
+                SizedBox(
+                  height: 24,
+                ),
+                section4(),
+                SizedBox(
+                  height: 24,
+                ),
+                section5(),
+                SizedBox(
+                  height: 24,
+                ),
+                section6(),
+              ],
+            ),
+          ),
+        ),
+        bottomNavigationBar: ConvexAppBar(
+          backgroundColor: Color(0xff1FCC79),
+          activeColor: Colors.white,
+
+          items: [
+            TabItem(icon: Icons.home, title: 'Home'),
+            TabItem(icon: Icons.pending_actions, title: 'Riwayat \n Transaksi'),
+            TabItem(icon: Icons.scanner, title: 'Scan'),
+            TabItem(icon: Icons.notifications, title: 'Notifications'),
+            TabItem(icon: Icons.people, title: 'Profile'),
+          ],
+          initialActiveIndex: 2, //optional, default as 0
+          onTap: (int i) => print('click index=$i'),
+        ));
   }
 }
