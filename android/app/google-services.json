@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "11864761218",
+    "project_id": "signin-1e985",
+    "storage_bucket": "signin-1e985.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11864761218:android:b0e4b44d3217240c08259b",
+        "android_client_info": {
+          "package_name": "com.example.sistem_antrian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11864761218-ib0t89gd80h9q90mu9hq4g6htg18p2u9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk7qtxTkr2kYz9KsW0of9vzuRRWttst_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11864761218-ib0t89gd80h9q90mu9hq4g6htg18p2u9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
