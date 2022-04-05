@@ -44,7 +44,7 @@ class splash2 extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'buatJanji');
+                    Navigator.pushNamed(context, 'convex');
                   },
                   child: Text(
                     "Mulai",

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:sistem_antrian/details/maps.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/cardObat.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/cardTentang.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/cardTersedia.dart';
@@ -217,48 +218,50 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
       );
     }
 
+    //maps
+    Widget section7() {
+      return Container(
+          child: Column(
+        children: [MapSample()],
+      ));
+    }
+
     return Scaffold(
-        body: Container(
-          child: ListView(
-            children: <Widget>[
-              section1(),
-              SizedBox(
-                height: 24,
-              ),
-              section2(),
-              SizedBox(
-                height: 24,
-              ),
-              section3(),
-              SizedBox(
-                height: 24,
-              ),
-              section4(),
-              SizedBox(
-                height: 24,
-              ),
-              section5(),
-              SizedBox(
-                height: 24,
-              ),
-              section6(),
-              SizedBox(
-                height: 24,
-              ),
-            ],
-          ),
-        ),
-        bottomNavigationBar: ConvexAppBar(
-          backgroundColor: Color(0xff1FCC79),
-          items: [
-            TabItem(icon: Icons.home, title: 'Home'),
-            TabItem(icon: Icons.pending_actions, title: 'History '),
-            TabItem(icon: Icons.search, title: 'Search'),
-            TabItem(icon: Icons.notifications, title: 'Notifications'),
-            TabItem(icon: Icons.people, title: 'Profile'),
+      body: Container(
+        child: ListView(
+          children: <Widget>[
+            Center(
+              child: Column(children: <Widget>[
+                section1(),
+                SizedBox(
+                  height: 24,
+                ),
+                section2(),
+                SizedBox(
+                  height: 24,
+                ),
+                section3(),
+                SizedBox(
+                  height: 24,
+                ),
+                section4(),
+                SizedBox(
+                  height: 24,
+                ),
+                section5(),
+                SizedBox(
+                  height: 24,
+                ),
+                section6(),
+                SizedBox(
+                  height: 24,
+                ),
+                section7(),
+              ]),
+            ),
           ],
-          initialActiveIndex: 2, //optional, default as 0
-          onTap: (int i) => print('click index=$i'),
-        ));
+        ),
+      ),
+    );
   }
 }

@@ -23,6 +23,7 @@ class _bookingState extends State<booking> {
     });
   }
 
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     //book
@@ -90,6 +91,7 @@ class _bookingState extends State<booking> {
     //section NIK
     Widget section6() {
       return TextFormField(
+        key: _formKey,
         keyboardType: TextInputType.number,
         decoration: new InputDecoration(
           prefixIcon: Icon(Icons.no_accounts),
@@ -104,6 +106,12 @@ class _bookingState extends State<booking> {
             borderRadius: new BorderRadius.circular(32),
           ),
         ),
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Please enter some text';
+          }
+          return null;
+        },
       );
     }
 
@@ -124,6 +132,7 @@ class _bookingState extends State<booking> {
           if (value!.isEmpty) {
             return 'Nama tidak boleh kosong';
           }
+          return null;
         },
       );
     }
@@ -306,7 +315,13 @@ class _bookingState extends State<booking> {
                   children: [
                     TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'statusAppoinment');
+                          if (_formKey.currentState!.validate()) {
+                            // If the form is valid, display a snackbar. In the real world,
+                            // you'd often call a server or save the information in a database.
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Processing Data')),
+                            );
+                          }
                         },
                         child: Text(
                           'Next',
@@ -323,6 +338,7 @@ class _bookingState extends State<booking> {
     }
 
     return Scaffold(
+      
       body: Container(
           margin: EdgeInsets.fromLTRB(24, 10, 24, 0),
           child: ListView(
