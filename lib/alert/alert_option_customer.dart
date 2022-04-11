@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:sistem_antrian/pages/Signin/signIn.dart';
 import 'package:sistem_antrian/pages/booking.dart';
 
 class PopupDialog extends StatelessWidget {
@@ -22,7 +24,7 @@ class PopupDialog extends StatelessWidget {
                   ElevatedButton(
                     child: Text('Baru'),
                     onPressed: () {
-                      Navigator.pushNamed(context, 'menulogin');
+                      Get.to(SignIn());
                     },
                   ),
                 ],
@@ -43,6 +45,7 @@ class PopupDialog extends StatelessWidget {
         child: Column(
           children: <Widget>[
             TextField(
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.people_alt_sharp),
                 labelText: 'NIK',
@@ -90,7 +93,7 @@ class PopupDialog extends StatelessWidget {
                   children: [
                     TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'appoinment');
+                          Get.to(booking());
                         },
                         child: Text('Login',
                             style: TextStyle(

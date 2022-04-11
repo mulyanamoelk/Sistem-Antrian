@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:sistem_antrian/pages/Signin/SignUp.dart';
+import 'package:sistem_antrian/pages/Signin/verification.dart';
+import 'package:sistem_antrian/pages/booking.dart';
 
 GoogleSignIn _googleSignIn = GoogleSignIn(
   scopes: [
@@ -110,7 +114,7 @@ class _SignInState extends State<SignIn> {
         child: Row(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
           TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, 'verification');
+              Get.to(verification());
             },
             child: Text('Lupa Password?',
                 style: TextStyle(
@@ -137,7 +141,7 @@ class _SignInState extends State<SignIn> {
             children: [
               TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'appoinment');
+                    Get.to(booking());
                   },
                   child: Text('Login',
                       style: TextStyle(
@@ -243,7 +247,7 @@ class _SignInState extends State<SignIn> {
               ),
               TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'signUp');
+                    Get.to(SignUp());
                   },
                   child: Text('Daftar',
                       style: TextStyle(

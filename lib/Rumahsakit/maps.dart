@@ -25,21 +25,23 @@ class MapSampleState extends State<MapSample> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        body: Container(
-      width: 300,
-      height: 300,
-      child: Column(
+      body: Stack(
         children: [
-          GoogleMap(
-            mapType: MapType.hybrid,
-            initialCameraPosition: _kGooglePlex,
-            onMapCreated: (GoogleMapController controller) {
-              _controller.complete(controller);
-            },
-          ),
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: double.infinity,
+            child: GoogleMap(
+              myLocationEnabled: true,
+              mapType: MapType.hybrid,
+              initialCameraPosition: _kGooglePlex,
+              onMapCreated: (GoogleMapController controller) {
+                _controller.complete(controller);
+              },
+            ),
+          )
         ],
       ),
-    ));
+    );
   }
 
   Future<void> _goToTheLake() async {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:sistem_antrian/pages/booking.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/time.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/toggle_switch_time.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -24,7 +26,7 @@ class _AturJadwalState extends State<AturJadwal> {
     //dokter
     Widget section() {
       return Container(
-        margin: EdgeInsets.fromLTRB(34, 25, 24, 0),
+        margin: EdgeInsets.fromLTRB(34, 24, 24, 0),
         child: Row(children: [
           Container(
             child: Column(children: [
@@ -32,7 +34,7 @@ class _AturJadwalState extends State<AturJadwal> {
                   ImageUrl: 'asset/images/buatJanji/bedah.png', link: 'link')
             ]),
           ),
-          SizedBox(width: 30),
+          SizedBox(width: 5),
           Container(
             padding: EdgeInsets.only(left: 30),
             child: Column(
@@ -147,7 +149,7 @@ class _AturJadwalState extends State<AturJadwal> {
           children: [
             TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, 'appoinment');
+                  Get.to(booking(), transition: Transition.zoom);
                 },
                 child: Text('Lanjut',
                     style: TextStyle(

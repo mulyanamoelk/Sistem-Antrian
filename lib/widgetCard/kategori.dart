@@ -14,7 +14,11 @@ class Cardkategori extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+      ),
+     
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
@@ -22,7 +26,6 @@ class Cardkategori extends StatelessWidget {
             width: 80,
             height: 83,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(60),
                 image: DecorationImage(image: AssetImage(imageUrl))),
           ),
           SizedBox(

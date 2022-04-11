@@ -1,7 +1,10 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:dropdown_plus/dropdown_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sistem_antrian/Rumahsakit/atur_jadwal.dart';
 import 'package:sistem_antrian/alert/alert_option_customer.dart';
+import 'package:sistem_antrian/status/status_appoinment.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/toggle_switch_orang.dart';
 
 class booking extends StatefulWidget {
@@ -24,6 +27,15 @@ class _bookingState extends State<booking> {
   }
 
   final _formKey = GlobalKey<FormState>();
+  TextEditingController nikController = new TextEditingController();
+  TextEditingController namaController = new TextEditingController();
+  TextEditingController noController = new TextEditingController();
+  TextEditingController emailController = new TextEditingController();
+  TextEditingController genderController = new TextEditingController();
+  TextEditingController lahirController = new TextEditingController();
+  TextEditingController bbController = new TextEditingController();
+  TextEditingController tbkController = new TextEditingController();
+  TextEditingController penyakitController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     //book
@@ -91,6 +103,7 @@ class _bookingState extends State<booking> {
     //section NIK
     Widget section6() {
       return TextFormField(
+        controller: nikController,
         key: _formKey,
         keyboardType: TextInputType.number,
         decoration: new InputDecoration(
@@ -118,6 +131,7 @@ class _bookingState extends State<booking> {
     //section Nama
     Widget section7() {
       return TextFormField(
+        controller: namaController,
         decoration: new InputDecoration(
           prefixIcon: Icon(Icons.person),
           hintText: "Santi ku",
@@ -140,6 +154,7 @@ class _bookingState extends State<booking> {
     //section no telpon
     Widget section8() {
       return TextFormField(
+        controller: noController,
         keyboardType: TextInputType.phone,
         decoration: new InputDecoration(
           prefixIcon: Icon(Icons.phone),
@@ -160,6 +175,7 @@ class _bookingState extends State<booking> {
     //section Email
     Widget section9() {
       return TextFormField(
+        controller: emailController,
         keyboardType: TextInputType.emailAddress,
         decoration: new InputDecoration(
           prefixIcon: Icon(Icons.mail),
@@ -265,7 +281,7 @@ class _bookingState extends State<booking> {
     //section riwaya penyakit
     Widget section14() {
       return TextFormField(
-        keyboardType: TextInputType.numberWithOptions(),
+        keyboardType: TextInputType.name,
         decoration: new InputDecoration(
           hintText: "Riwayat Penyakit",
           prefixIcon: Icon(Icons.coronavirus),
@@ -296,7 +312,9 @@ class _bookingState extends State<booking> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(AturJadwal());
+                          },
                           child: Text('Back',
                               style: TextStyle(
                                   color: Color(0xff2E3E5C),
@@ -315,13 +333,7 @@ class _bookingState extends State<booking> {
                   children: [
                     TextButton(
                         onPressed: () {
-                          if (_formKey.currentState!.validate()) {
-                            // If the form is valid, display a snackbar. In the real world,
-                            // you'd often call a server or save the information in a database.
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text('Processing Data')),
-                            );
-                          }
+                          Get.to(status_appoinment());
                         },
                         child: Text(
                           'Next',
@@ -338,7 +350,6 @@ class _bookingState extends State<booking> {
     }
 
     return Scaffold(
-      
       body: Container(
           margin: EdgeInsets.fromLTRB(24, 10, 24, 0),
           child: ListView(

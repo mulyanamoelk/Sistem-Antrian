@@ -25,14 +25,7 @@ class _Toggle_Switch_OrangState extends State<Toggle_Switch_Orang> {
         [Color(0xff1FCC79)]
       ],
       onToggle: (index) {
-        setState(() {
-          var index2 = index;
-          if (index2 == index) {
-            Navigator.pushNamed(context, 'routeName');
-          } else {
-            Navigator.pushNamed(context, 'appoinment');
-          }
-        });
+        setState(() {});
         // print('switched to: $index');
       },
     );

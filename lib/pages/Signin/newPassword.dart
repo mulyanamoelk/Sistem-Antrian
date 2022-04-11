@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sistem_antrian/pages/Signin/Pass-recovery.dart';
 
 class newPassword extends StatefulWidget {
   const newPassword({Key? key}) : super(key: key);
@@ -121,7 +123,7 @@ class _newPasswordState extends State<newPassword> {
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, 'passRecovery');
+                  Get.to(PassRecovery());
                 },
                 child: Text('Done',
                     style: TextStyle(

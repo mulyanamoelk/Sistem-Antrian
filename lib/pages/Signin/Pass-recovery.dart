@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sistem_antrian/pages/Signin/Pass-verification.dart';
 
 class PassRecovery extends StatefulWidget {
   const PassRecovery({Key? key}) : super(key: key);
@@ -65,7 +67,7 @@ class _PassRecoveryState extends State<PassRecovery> {
             children: [
               TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'emailCheck');
+                    Get.to(CheckRecovery());
                   },
                   child: Text('Sign In',
                       style: TextStyle(

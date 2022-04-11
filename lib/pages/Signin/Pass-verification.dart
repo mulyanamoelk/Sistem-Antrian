@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sistem_antrian/pages/Signin/signIn.dart';
 
 class CheckRecovery extends StatefulWidget {
   const CheckRecovery({Key? key}) : super(key: key);
@@ -45,7 +47,7 @@ class _CheckRecoveryState extends State<CheckRecovery> {
             children: [
               TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'rsNurhayati');
+                    Get.to(SignIn());
                   },
                   child: Text('Next',
                       style: TextStyle(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sistem_antrian/pages/Signin/newPassword.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 class verification extends StatefulWidget {
@@ -91,7 +93,7 @@ class _verificationState extends State<verification> {
             children: [
               TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'newPassword');
+                    Get.to(newPassword());
                   },
                   child: Text('Verify',
                       style: TextStyle(

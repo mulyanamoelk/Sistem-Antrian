@@ -1,12 +1,13 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:sistem_antrian/Rumahsakit/dokterTersedia.dart';
 import 'package:sistem_antrian/bottom-navigation/history.dart';
 import 'package:sistem_antrian/bottom-navigation/notifications.dart';
-import 'package:sistem_antrian/details/detailRsNurhayati.dart';
+import 'package:sistem_antrian/bottom-navigation/profile.dart';
+
 import 'package:sistem_antrian/pages/Signin/signIn.dart';
 import 'package:sistem_antrian/pages/booking.dart';
 import 'package:sistem_antrian/bottom-navigation/buatJanji.dart';
-import 'package:sistem_antrian/bottom-navigation/myProfile.dart';
 
 class convex extends StatefulWidget {
   const convex({Key? key}) : super(key: key);
@@ -20,9 +21,9 @@ class _convexState extends State<convex> {
   List showWidget = [
     buatJanji(),
     History(),
-    History(),
+    DokterTersedia(),
     Notifications(),
-    myProfile(),
+    Profile(),
   ];
   @override
   void initState() {

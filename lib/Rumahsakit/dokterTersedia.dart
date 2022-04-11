@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sistem_antrian/Rumahsakit/atur_jadwal.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/cardObat.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/cardTersedia.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/card_dokter.dart';
@@ -20,7 +22,7 @@ class _DokterTersediaState extends State<DokterTersedia> {
           child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         BackButton(
           onPressed: () {
-            Navigator.pop(context);
+            Get.back();
           },
         )
       ]));
@@ -150,7 +152,9 @@ class _DokterTersediaState extends State<DokterTersedia> {
               //pertama
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'kalender');
+                  Get.to(AturJadwal(),
+                      transition: Transition.topLevel,
+                      duration: Duration(seconds: 1));
                 },
                 child: Row(
                   children: [

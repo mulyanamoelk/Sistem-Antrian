@@ -1,6 +1,9 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sistem_antrian/bottom-navigation/convex-bar.dart';
+import 'package:sistem_antrian/view/splash2.dart';
+
 import 'package:sistem_antrian/widgetCard/kategori.dart';
 import 'package:sistem_antrian/widgetCard/promo.dart';
 import 'package:sistem_antrian/widgetCard/rsSekitar.dart';
@@ -17,7 +20,7 @@ class buatJanji extends StatelessWidget {
               children: <Widget>[
             Container(child: BackButton(
               onPressed: () {
-                Navigator.pop(context);
+                Get.offAll(splash2());
               },
             )),
             Container(
@@ -71,7 +74,7 @@ class buatJanji extends StatelessWidget {
                 //rs 1
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, 'detailRsNurhayati');
+                    Get.toNamed('/nurhayati');
                   },
                   child: Row(
                     children: [
@@ -284,9 +287,9 @@ class buatJanji extends StatelessWidget {
             section4(),
             SizedBox(height: 20),
             section5(),
-            SizedBox(height: 50),
+            SizedBox(height: 20),
             section6(),
-            SizedBox(height: 50),
+            SizedBox(height: 30),
           ],
         ),
       ),

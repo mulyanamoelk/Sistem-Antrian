@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:sistem_antrian/details/maps.dart';
+import 'package:get/get.dart';
+import 'package:sistem_antrian/Rumahsakit/dokterTersedia.dart';
+import 'package:sistem_antrian/Rumahsakit/maps.dart';
+
 import 'package:sistem_antrian/widgetCard/cardDetailRS/cardObat.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/cardTentang.dart';
 import 'package:sistem_antrian/widgetCard/cardDetailRS/cardTersedia.dart';
@@ -35,7 +38,7 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
               children: [
                 BackButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    Get.back();
                   },
                 )
               ],
@@ -56,22 +59,32 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
               child: Column(children: [
                 Text(
                   " Klinik Corner \n RSIH",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
               ]),
             ),
             Container(
-              child: Column(
-                children: <Widget>[
-                  Icon(Icons.map),
-                  Icon(
-                    Icons.star,
-                    size: 15,
-                    color: Colors.orange,
-                  )
-                ],
+              child: InkWell(
+                onTap: () {
+                  Get.to(MapSample(), transition: Transition.downToUp);
+                },
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Lokasi',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Icon(Icons.maps_home_work_outlined),
+                  ],
+                ),
               ),
-            ),
+            )
           ],
         ),
       );
@@ -91,14 +104,14 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
     //pilih tanggal
     Widget section4() {
       return Container(
-          margin: EdgeInsets.all(24),
+          margin: EdgeInsets.fromLTRB(24, 5, 24, 24),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // buat janji
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'janji');
+                  Get.to(DokterTersedia(), transition: Transition.zoom);
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -137,8 +150,7 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
 
     //layanan tersedia
     Widget section5() {
-      return GestureDetector(
-        onDoubleTap: () {},
+      return Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -151,7 +163,7 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
               height: 10,
             ),
             Container(
-              margin: EdgeInsets.all(24),
+              margin: EdgeInsets.fromLTRB(24, 5, 24, 24),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -182,7 +194,7 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
     //tentang klinik
     Widget section6() {
       return Container(
-        margin: EdgeInsets.all(24),
+        margin: EdgeInsets.fromLTRB(24, 5, 24, 24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -222,7 +234,7 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
     Widget section7() {
       return Container(
           child: Column(
-        children: [MapSample()],
+        children: [],
       ));
     }
 
@@ -234,27 +246,27 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
               child: Column(children: <Widget>[
                 section1(),
                 SizedBox(
-                  height: 24,
+                  height: 10,
                 ),
                 section2(),
                 SizedBox(
-                  height: 24,
+                  height: 10,
                 ),
                 section3(),
                 SizedBox(
-                  height: 24,
+                  height: 10,
                 ),
                 section4(),
                 SizedBox(
-                  height: 24,
+                  height: 10,
                 ),
                 section5(),
                 SizedBox(
-                  height: 24,
+                  height: 10,
                 ),
                 section6(),
                 SizedBox(
-                  height: 24,
+                  height: 10,
                 ),
                 section7(),
               ]),

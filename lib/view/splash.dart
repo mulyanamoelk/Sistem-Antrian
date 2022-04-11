@@ -63,7 +63,6 @@ class _splashState extends State<splash> {
     Widget section3() {
       return Container(
           width: 341,
-          height: 350,
           child: Center(
             child: Column(children: <Widget>[
               Lottie.network(

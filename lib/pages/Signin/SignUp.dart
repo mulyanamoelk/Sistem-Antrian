@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sistem_antrian/pages/Signin/signIn.dart';
 import 'package:sistem_antrian/pages/Signin/verification.dart';
 
 class SignUp extends StatefulWidget {
@@ -144,8 +146,7 @@ class _SignUpState extends State<SignUp> {
             children: [
               TextButton(
                   onPressed: () async {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (p) => verification()));
+                    Get.to(verification());
                   },
                   child: Text('Daftar',
                       style: TextStyle(
@@ -174,7 +175,7 @@ class _SignUpState extends State<SignUp> {
               ),
               TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, 'menulogin');
+                    Get.to(SignIn());
                   },
                   child: Text('Login',
                       style: TextStyle(
