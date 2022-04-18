@@ -87,9 +87,9 @@ class _DokterTersediaState extends State<DokterTersedia> {
               onTap: () {},
               child: Column(children: [
                 cardTersedia(
-                    ImageUrl: 'asset/images/details/ortho.png',
-                    title: 'Ortho',
-                    link: 'ortho'),
+                  ImageUrl: 'images/ortho.png',
+                  title: 'Ortho',
+                ),
               ]),
             ),
             //paru
@@ -97,9 +97,9 @@ class _DokterTersediaState extends State<DokterTersedia> {
               onTap: () {},
               child: Column(children: [
                 cardTersedia(
-                    ImageUrl: 'asset/images/details/paru.png',
-                    title: 'Paru',
-                    link: 'ortho'),
+                  ImageUrl: 'images/paru.png',
+                  title: 'Paru',
+                ),
               ]),
             ),
             //urology
@@ -107,9 +107,9 @@ class _DokterTersediaState extends State<DokterTersedia> {
               onTap: () {},
               child: Column(children: [
                 cardTersedia(
-                    ImageUrl: 'asset/images/details/urology.png',
-                    title: 'Urology',
-                    link: 'ortho'),
+                  ImageUrl: 'images/urology.png',
+                  title: 'Urology',
+                ),
               ]),
             ),
             //jantung
@@ -117,9 +117,9 @@ class _DokterTersediaState extends State<DokterTersedia> {
               onTap: () {},
               child: Column(children: [
                 cardTersedia(
-                    ImageUrl: 'asset/images/details/jantung.png',
-                    title: 'Jantung',
-                    link: 'ortho'),
+                  ImageUrl: 'images/jantung.png',
+                  title: 'Jantung',
+                ),
               ]),
             ),
           ]),
@@ -152,15 +152,13 @@ class _DokterTersediaState extends State<DokterTersedia> {
               //pertama
               InkWell(
                 onTap: () {
-                  Get.to(AturJadwal(),
-                      transition: Transition.topLevel,
-                      duration: Duration(seconds: 1));
+                  Get.toNamed('/kalender');
                 },
                 child: Row(
                   children: [
                     cardDokter(
-                        ImageUrl: 'asset/images/buatJanji/bedah.png',
-                        link: 'link'),
+                      ImageUrl: 'images/bedah.png',
+                    ),
                     Container(
                       decoration: BoxDecoration(),
                       padding: EdgeInsets.only(left: 30),
@@ -190,13 +188,13 @@ class _DokterTersediaState extends State<DokterTersedia> {
 
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, 'kalender');
+                  Get.toNamed('/kalender');
                 },
                 child: Row(
                   children: [
                     cardDokter(
-                        ImageUrl: 'asset/images/buatJanji/bedah.png',
-                        link: 'link'),
+                      ImageUrl: 'images/bedah.png',
+                    ),
                     Container(
                       decoration: BoxDecoration(),
                       padding: EdgeInsets.only(left: 30),
@@ -224,14 +222,12 @@ class _DokterTersediaState extends State<DokterTersedia> {
               ),
               //ketiga
               InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, 'kalender');
-                },
+                onTap: () {},
                 child: Row(
                   children: [
                     cardDokter(
-                        ImageUrl: 'asset/images/buatJanji/bedah.png',
-                        link: 'link'),
+                      ImageUrl: 'images/bedah.png',
+                    ),
                     Container(
                       decoration: BoxDecoration(),
                       padding: EdgeInsets.only(left: 30),
@@ -260,14 +256,12 @@ class _DokterTersediaState extends State<DokterTersedia> {
 
               //ke empat
               InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, 'kalender');
-                },
+                onTap: () {},
                 child: Row(
                   children: [
                     cardDokter(
-                        ImageUrl: 'asset/images/buatJanji/bedah.png',
-                        link: 'link'),
+                      ImageUrl: 'images/bedah.png',
+                    ),
                     Container(
                       decoration: BoxDecoration(),
                       padding: EdgeInsets.only(left: 30),
@@ -307,7 +301,7 @@ class _DokterTersediaState extends State<DokterTersedia> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      cardTips(ImageUrl: 'asset/images/details/homecare.png'),
+                      cardTips(ImageUrl: 'images/homecare.png'),
                       Container(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -335,8 +329,7 @@ class _DokterTersediaState extends State<DokterTersedia> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      cardTips(
-                          ImageUrl: 'asset/images/details/baby-shampoo.png'),
+                      cardTips(ImageUrl: 'images/baby-shampoo.png'),
                       Container(
                         margin: EdgeInsets.only(left: 40),
                         child: Column(
@@ -364,7 +357,7 @@ class _DokterTersediaState extends State<DokterTersedia> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      cardTips(ImageUrl: 'asset/images/details/homecare.png'),
+                      cardTips(ImageUrl: 'images/homecare.png'),
                       Container(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -392,8 +385,7 @@ class _DokterTersediaState extends State<DokterTersedia> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      cardTips(
-                          ImageUrl: 'asset/images/details/baby-shampoo.png'),
+                      cardTips(ImageUrl: 'images/baby-shampoo.png'),
                       Container(
                         margin: EdgeInsets.only(left: 40),
                         child: Column(

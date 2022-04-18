@@ -10,24 +10,8 @@ class status_appoinment extends StatefulWidget {
 }
 
 class _status_appoinmentState extends State<status_appoinment> {
-  //share
-  Widget section() {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Image.asset(
-            'asset/images/profile/Vector.png',
-            width: 24,
-            height: 24,
-          )
-        ],
-      ),
-    );
-  }
-
   //bookings
-  Widget section2() {
+  Widget section() {
     return Text('Bookings',
         style: TextStyle(
             color: Color(0xff3E5481),
@@ -36,7 +20,7 @@ class _status_appoinmentState extends State<status_appoinment> {
   }
 
   //proses
-  Widget section3() {
+  Widget section2() {
     return Container(
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
         //sukses
@@ -98,7 +82,7 @@ class _status_appoinmentState extends State<status_appoinment> {
   }
 
   //timeline tile
-  Widget section4() {
+  Widget section3() {
     return Container();
   }
 
@@ -117,7 +101,6 @@ class _status_appoinmentState extends State<status_appoinment> {
                     SizedBox(height: 20),
                     section3(),
                     SizedBox(height: 20),
-                    section4(),
                   ],
                 ),
               ),

@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class cardTentang extends StatelessWidget {
   final String ImageUrl;
 
-  final String link;
-  const cardTentang({Key? key, required this.ImageUrl, required this.link})
-      : super(key: key);
+  const cardTentang({
+    Key? key,
+    required this.ImageUrl,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +16,7 @@ class cardTentang extends StatelessWidget {
           width: 111,
           height: 89,
           decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
               image: DecorationImage(image: AssetImage(ImageUrl)))),
     ]));
   }

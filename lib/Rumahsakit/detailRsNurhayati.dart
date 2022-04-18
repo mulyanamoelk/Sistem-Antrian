@@ -23,7 +23,7 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
       return Stack(
         children: <Widget>[
           Image(
-            image: AssetImage('asset/images/details/gambarRsNurhayati.png'),
+            image: AssetImage('images/gambarRsNurhayati.png'),
             width: 398,
             height: 286,
           ),
@@ -111,13 +111,13 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
               // buat janji
               InkWell(
                 onTap: () {
-                  Get.to(DokterTersedia(), transition: Transition.zoom);
+                  Get.toNamed('/buatJanji');
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     card1(
-                        ImageUrl: 'asset/images/buatJanji/buatJanji.png',
+                        ImageUrl: 'images/buatJanji.png',
                         title: 'buat janji',
                         link: 'janji'),
                   ],
@@ -128,7 +128,7 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
                 child: Row(
                   children: [
                     card1(
-                        ImageUrl: 'asset/images/buatJanji/obat.png',
+                        ImageUrl: 'images/obat.png',
                         title: 'Resep Obat',
                         link: 'obat'),
                   ],
@@ -139,7 +139,7 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
                   child: Row(
                     children: [
                       card1(
-                          ImageUrl: 'asset/images/buatJanji/konsultasi.png',
+                          ImageUrl: 'images/konsultasi.png',
                           title: 'Konsultasi',
                           link: '/'),
                     ],
@@ -168,21 +168,21 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   cardTersedia(
-                      ImageUrl: 'asset/images/details/ortho.png',
-                      title: 'Ortho',
-                      link: 'ortho'),
+                    ImageUrl: 'images/ortho.png',
+                    title: 'Ortho',
+                  ),
                   cardTersedia(
-                      ImageUrl: 'asset/images/details/paru.png',
-                      title: 'paru',
-                      link: 'paru'),
+                    ImageUrl: 'images/paru.png',
+                    title: 'paru',
+                  ),
                   cardTersedia(
-                      ImageUrl: 'asset/images/details/urology.png',
-                      title: 'Urology',
-                      link: 'paru'),
+                    ImageUrl: 'images/urology.png',
+                    title: 'Urology',
+                  ),
                   cardTersedia(
-                      ImageUrl: 'asset/images/details/jantung.png',
-                      title: 'Jantung',
-                      link: 'paru')
+                    ImageUrl: 'images/jantung.png',
+                    title: 'Jantung',
+                  )
                 ],
               ),
             ),
@@ -212,16 +212,20 @@ class _DetailRsNurhayatiState extends State<DetailRsNurhayati> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   cardTentang(
-                      ImageUrl: 'asset/images/details/pic.png', link: 'pic'),
+                    ImageUrl: 'images/rs.png',
+                  ),
                   SizedBox(width: 10),
                   cardTentang(
-                      ImageUrl: 'asset/images/details/pic.png', link: 'pic'),
+                    ImageUrl: 'images/rs.png',
+                  ),
                   SizedBox(width: 10),
                   cardTentang(
-                      ImageUrl: 'asset/images/details/pic.png', link: 'pic'),
+                    ImageUrl: 'images/rs.png',
+                  ),
                   SizedBox(width: 10),
                   cardTentang(
-                      ImageUrl: 'asset/images/details/pic.png', link: 'pic')
+                    ImageUrl: 'images/rs.png',
+                  )
                 ],
               ),
             )

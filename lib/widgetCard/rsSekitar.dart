@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 class cardRs extends StatelessWidget {
   final String imageUrl;
   final String title;
-  final String link;
-  const cardRs(
-      {Key? key,
-      required this.imageUrl,
-      required this.title,
-      required this.link})
-      : super(key: key);
+
+  const cardRs({
+    Key? key,
+    required this.imageUrl,
+    required this.title,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

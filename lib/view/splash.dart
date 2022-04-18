@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:sistem_antrian/view/splash2.dart';
 
@@ -21,8 +22,7 @@ class _splashState extends State<splash> {
   splash() async {
     var duration = Duration(seconds: 3);
     return Timer(duration, () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => splash2()));
+      Get.toNamed('/splash2');
     });
   }
 
@@ -35,7 +35,7 @@ class _splashState extends State<splash> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image(
-              image: AssetImage('asset/images/buatJanji/Logo.png'),
+              image: AssetImage('images/Logo.png'),
               width: 87,
               height: 93,
             ),

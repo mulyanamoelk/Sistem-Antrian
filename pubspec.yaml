@@ -39,6 +39,7 @@ dependencies:
   toggle_switch: ^1.4.0
   timeline_tile: ^2.0.0
   timelines: ^0.1.0
+  flutter_slidable: ^1.2.0
   dropdown_plus: ^0.0.9
   google_sign_in: ^5.2.4
   firebase_auth: ^3.3.11
@@ -66,63 +67,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
   assets:
-    - asset/images/splash/appoitment1.png
-    - asset/images/splash/pic.png
-    - asset/images/splash/phonecall.png
-    - asset/images/splash/pertama.png
-    - asset/images/splash/kedua.png
-    - asset/images/buatJanji/rs.png
-    - asset/images/details/gambarRsNurhayati.png
-    - asset/images/details/jantung.png
-    - asset/images/details/ortho.png
-    - asset/images/details/paru.png
-    - asset/images/details/pic.png
-    - asset/images/details/urology.png
-    - asset/images/details/queen.jpg
-    - asset/images/details/homecare.png
-    - asset/images/details/baby-shampoo.png
-    - asset/images/buatJanji/bedah.png
-    - asset/images/buatJanji/buatJanji.png
-    - asset/images/buatJanji/Calender.png
-    - asset/images/buatJanji/dalam.png
-    - asset/images/buatJanji/janji.png
-    - asset/images/buatJanji/jiwa.png
-    - asset/images/buatJanji/konsultasi.png
-    - asset/images/buatJanji/Logo.png
-    - asset/images/buatJanji/obat.png
-    - asset/images/buatJanji/umum.png
-    - asset/images/buatJanji/kartini.png
-    - asset/images/profile/Avatar.png
-    - asset/images/profile/Vector.png
-    - asset/images/profile/Chat.png
-    - asset/images/profile/password.png
-    - asset/images/profile/email.png
-    - asset/images/profile/booking.png
-    - asset/images/profile/Phone.png
-    - asset/images/profile/lokasi.png
+    - images/
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
   fonts:
     - family: Poppins
       fonts:
-        - asset: asset/fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-Regular.ttf
         # - asset: asset/fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

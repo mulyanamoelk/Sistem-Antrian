@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class cardDokter extends StatelessWidget {
   final String ImageUrl;
-  final String link;
-  const cardDokter({Key? key, required this.ImageUrl, required this.link})
+  
+  const cardDokter({Key? key, required this.ImageUrl, })
       : super(key: key);
 
   @override

@@ -37,7 +37,7 @@ class buatJanji extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image(
-              image: AssetImage('asset/images/buatJanji/Logo.png'),
+              image: AssetImage('images/Logo.png'),
               width: 90,
               height: 90,
             ),
@@ -79,10 +79,9 @@ class buatJanji extends StatelessWidget {
                   child: Row(
                     children: [
                       cardRs(
-                          imageUrl:
-                              "asset/images/details/gambarRsNurhayati.png",
-                          title: "RSIH",
-                          link: 'detailRsNurhayati'),
+                        imageUrl: "images/gambarRsNurhayati.png",
+                        title: "RSIH",
+                      ),
                     ],
                   ),
                 ),
@@ -95,9 +94,9 @@ class buatJanji extends StatelessWidget {
                   child: Row(
                     children: [
                       cardRs(
-                          imageUrl: "asset/images/details/queen.jpg",
-                          title: "Annisa Queen",
-                          link: 'annisa Queen'),
+                        imageUrl: "images/queen.jpg",
+                        title: "Annisa Queen",
+                      ),
                     ],
                   ),
                 ),
@@ -110,10 +109,9 @@ class buatJanji extends StatelessWidget {
                   child: Row(
                     children: [
                       cardRs(
-                          imageUrl:
-                              "asset/images/details/gambarRsNurhayati.png",
-                          title: "RSIH",
-                          link: 'detailRsNurhayati'),
+                        imageUrl: "images/gambarRsNurhayati.png",
+                        title: "RSIH",
+                      ),
                     ],
                   ),
                 ),
@@ -126,10 +124,9 @@ class buatJanji extends StatelessWidget {
                   child: Row(
                     children: [
                       cardRs(
-                          imageUrl:
-                              "asset/images/details/gambarRsNurhayati.png",
-                          title: "RSIH",
-                          link: 'detailRsNurhayati'),
+                        imageUrl: "images/gambarRsNurhayati.png",
+                        title: "RSIH",
+                      ),
                     ],
                   ),
                 ),
@@ -141,10 +138,9 @@ class buatJanji extends StatelessWidget {
                   child: Row(
                     children: [
                       cardRs(
-                          imageUrl:
-                              "asset/images/details/gambarRsNurhayati.png",
-                          title: "RSIH",
-                          link: 'detailRsNurhayati'),
+                        imageUrl: "images/gambarRsNurhayati.png",
+                        title: "RSIH",
+                      ),
                     ],
                   ),
                 ),
@@ -175,35 +171,35 @@ class buatJanji extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Cardkategori(
-                      imageUrl: "asset/images/buatJanji/bedah.png",
+                      imageUrl: "images/bedah.png",
                       title: "Bedah",
                       link: 'bedah'),
                   SizedBox(
                     width: 20,
                   ),
                   Cardkategori(
-                      imageUrl: "asset/images/buatJanji/bedah.png",
+                      imageUrl: "images/bedah.png",
                       title: "Bedah",
                       link: 'bedah'),
                   SizedBox(
                     width: 20,
                   ),
                   Cardkategori(
-                      imageUrl: "asset/images/buatJanji/bedah.png",
+                      imageUrl: "images/bedah.png",
                       title: "Bedah",
                       link: 'bedah'),
                   SizedBox(
                     width: 20,
                   ),
                   Cardkategori(
-                      imageUrl: "asset/images/buatJanji/bedah.png",
+                      imageUrl: "images/bedah.png",
                       title: "Bedah",
                       link: 'bedah'),
                   SizedBox(
                     width: 20,
                   ),
                   Cardkategori(
-                      imageUrl: "asset/images/buatJanji/bedah.png",
+                      imageUrl: "images/bedah.png",
                       title: "Bedah",
                       link: 'bedah'),
                   SizedBox(
@@ -234,15 +230,15 @@ class buatJanji extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: <Widget>[
-                  cardPromo(imageUrl: "asset/images/buatJanji/kartini.png"),
+                  cardPromo(imageUrl: "images/kartini.png"),
                   SizedBox(
                     width: 10,
                   ),
-                  cardPromo(imageUrl: "asset/images/buatJanji/kartini.png"),
+                  cardPromo(imageUrl: "images/kartini.png"),
                   SizedBox(
                     width: 10,
                   ),
-                  cardPromo(imageUrl: "asset/images/buatJanji/kartini.png"),
+                  cardPromo(imageUrl: "images/kartini.png"),
                   SizedBox(
                     width: 10,
                   )
@@ -264,7 +260,7 @@ class buatJanji extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              'asset/images/buatJanji/janji.png',
+              'images/janji.png',
               width: 334,
               height: 190,
             )

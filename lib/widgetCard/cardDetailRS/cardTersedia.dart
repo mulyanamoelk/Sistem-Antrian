@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 class cardTersedia extends StatelessWidget {
   final String ImageUrl;
   final String title;
-  final String link;
-  const cardTersedia(
-      {Key? key,
-      required this.ImageUrl,
-      required this.title,
-      required this.link})
-      : super(key: key);
+
+  const cardTersedia({
+    Key? key,
+    required this.ImageUrl,
+    required this.title,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

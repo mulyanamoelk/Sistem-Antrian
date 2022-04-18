@@ -31,7 +31,8 @@ class _AturJadwalState extends State<AturJadwal> {
           Container(
             child: Column(children: [
               cardDokter(
-                  ImageUrl: 'asset/images/buatJanji/bedah.png', link: 'link')
+                ImageUrl: 'images/bedah.png',
+              )
             ]),
           ),
           SizedBox(width: 5),
@@ -149,7 +150,7 @@ class _AturJadwalState extends State<AturJadwal> {
           children: [
             TextButton(
                 onPressed: () {
-                  Get.to(booking(), transition: Transition.zoom);
+                  Get.toNamed('/appoinment');
                 },
                 child: Text('Lanjut',
                     style: TextStyle(
